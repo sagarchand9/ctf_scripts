@@ -1,0 +1,4 @@
+We make a random guess for password and captcha. It is wrong :P, but we get captcha in cookie. We now run brute force for the password. 10 digits and 5 vowels(small case)
+So we have 15^5 combination. We finally get our password.
+Now we get a new question
+For this we see in code that 16-length message is divided into length of 4 and recursively used. So we take message to be of size 4 and start from'0000', eliminating furthur computations. Now we brute force for a particular message to match hl and hr. We find a lot of solutions for a particular message. So we choose a particular message and any value of hl and hr corresponding to that message.

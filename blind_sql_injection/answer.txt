@@ -1,0 +1,7 @@
+We observe that it is blind sql injection problem.
+If our sql query matches we get "Wow there is book there", otherwise we get OOPS!
+So we write a script(attached) and try for all combinations of next entry until we stop getting OOPS!
+Each request looks something like:-
+
+' or title like 'c%' or '1' = '2   
+

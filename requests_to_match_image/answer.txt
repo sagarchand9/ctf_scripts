@@ -1,0 +1,14 @@
+This is sql injection yet again.
+We find hash of '1' with salt 'a'. We get 'a73fcf339640929207281fb8e038884806e2eb0840f2245694dbba1d5cc89e65'
+
+We UNION two queries, with the second query selecting the injected data.
+
+We now put ‘1’ in the password box, we will get the server to run sha246 on ‘1’ + ‘a’, and check it against the hash that we fed in.
+
+'UNION select id, 'a73fcf339640929207281fb8e038884806e2eb0840f2245694dbba1d5cc89e65', 'a' FROM users WHERE username = 'sagarch
+
+---------------------------------------------------
+
+
+Now we have an image. If we open this link on any other, we are asked an input string. Whatever we type in that string we get an image. Now our objective is to find such a string such that we get our original image. 
+We know our flag to be of 40 character long. We start we all a's. Then we start changing 1st character. Iterate over all alphanumeric values and 2 paranthesis and find the character with closest resembelance with original image. We do this for all 40 charaters and get the flag.
